@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://orionhome.nl/
+
+# Sitemaps
+Sitemap: https://orionhome.nl/api/sitemap.xml

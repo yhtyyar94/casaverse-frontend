@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>http://localhost:3000/api</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/algemene-voorwaarden</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/cart</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/checkout</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/contact</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/cookies</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/favorite</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/inloggen</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/mijn-account</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/reset-password</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/retourneren</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/robots</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/success</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/api/veelgestelde-vragen</loc><lastmod>2024-02-16T03:56:09.163Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
