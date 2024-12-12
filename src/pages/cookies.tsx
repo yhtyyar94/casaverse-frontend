@@ -9,11 +9,11 @@ const Cookies = () => {
       p={0}
     >
       <Text fontSize={"2xl"} fontWeight={"bold"} my={5} textAlign={"center"}>
-        Cookiebeleid voor orionhome.nl
+        Cookiebeleid voor casaverse.nl
       </Text>
 
       <p>
-        Dit is het Cookiebeleid voor orionhome.nl, toegankelijk via orionhome.nl
+        Dit is het Cookiebeleid voor casaverse.nl, toegankelijk via casaverse.nl
       </p>
 
       <p>
@@ -279,14 +279,14 @@ const Cookies = () => {
       </p>
 
       <ul>
-        <li>Email: orionstores.nl@gmail.com</li>
+        <li>Email: casaversenl@gmail.com | info@casaverse.nl</li>
         <li>
           Door deze link te bezoeken:{" "}
           <Link style={{ color: "blue" }} href={"/contact"}>
             contact
           </Link>
         </li>
-        <li>Telefoon: +31619103508</li>
+        <li>Telefoon: 0627382805</li>
       </ul>
     </Stack>
   );

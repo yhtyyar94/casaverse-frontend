@@ -1,7 +1,6 @@
 import Image from "next/image";
-import logo from "../../images/orion.png";
+import logo from "../../images/casaverse.jpeg";
 import cartIcon from "../../images/cartIcon.png";
-import { BiCaretDown } from "react-icons/bi";
 import { HiOutlineSearch } from "react-icons/hi";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
@@ -86,7 +85,7 @@ const Header = () => {
               className="px-2 border border-transparent cursor-pointer duration-300 flex items-center justify-center h-[70%]"
             >
               <Image
-                className="w-28 object-cover mt-1"
+                className="w-32 object-cover mt-1"
                 src={logo}
                 alt="logoImg"
               />

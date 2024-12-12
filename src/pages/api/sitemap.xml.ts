@@ -3,7 +3,7 @@ import getAllProducts from "@/utils/getAllProducts";
 import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const homepage = "https://www.orionhome.nl";
+const homepage = "https://www.casaverse.nl";
 
 function generateSiteMap(data: any) {
   const urls = data?.map((item: any) => {

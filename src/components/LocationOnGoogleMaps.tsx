@@ -51,7 +51,7 @@ const LocationOnGoogleMaps = () => {
       >
         <Box>
           <Text fontWeight={"bold"} mb={5}>
-            Orion Home
+            Casa Verse
           </Text>
           <Text mb={3}>Wageningselaan 50, 3903 LA Veenendaal</Text>
           <Text>Maandag - Vrijdag: 9:00 - 17:00</Text>
@@ -89,7 +89,7 @@ const LocationOnGoogleMaps = () => {
           <TileLayerWithNoSSR url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <MarkerWithNoSSR position={center}>
             <PopupWithNoSSR>
-              Orion Home <br /> Wageningselaan 50, <br /> 3903 LA Veenendaal
+              Casa Verse <br /> Wageningselaan 50, <br /> 3903 LA Veenendaal
             </PopupWithNoSSR>
           </MarkerWithNoSSR>
         </MapWithNoSSR>

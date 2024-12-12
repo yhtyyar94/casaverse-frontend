@@ -109,17 +109,17 @@ const AlgemeneVoorwaarden = () => {
         <strong>Artikel 2 - Identiteit van de ondernemer</strong>
       </p>
       <p>
-        Orionhome.nl;
+        Casaverse.nl;
         <br />
         Wageningselaan 50, 3903 LA Veenendaal;
         <br />
-        Telefoonnummer: +31619103508
+        Telefoonnummer: 0627382805
         <br />
-        E-mailadres: orionstore.nl@gmail.com
+        E-mailadres: casaversenl@gmail.com | info@casaverse.nl
         <br />
-        KvK-nummer: 90216024
+        KvK-nummer: 95324828
         <br />
-        Btw-identificatienummer: NL865244935B01
+        Btw-identificatienummer: NL005148477B98
       </p>
       <p>
         <strong>Artikel 3 - Toepasselijkheid&nbsp;</strong>

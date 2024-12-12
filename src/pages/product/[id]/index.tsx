@@ -193,7 +193,7 @@ const DynamicPage = ({
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="Orion, home" />
+        <meta name="keywords" content="Casaverse, home, casa verse" />
         <meta property="og:locale" content="nl_NL" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="title" content={meta.title} />
@@ -206,12 +206,12 @@ const DynamicPage = ({
           property="og:url"
           content={`${process.env.NEXT_PUBLIC_AUTH_URL}${path}`}
         />
-        <meta property="og:site_name" content="Orion Home" />
+        <meta property="og:site_name" content="Casa Verse" />
         <meta property="og:locale" content="nl_NL" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@orionhome" />
-        <meta name="twitter:creator" content="@orionhome" />
+        <meta name="twitter:site" content="@casaverse" />
+        <meta name="twitter:creator" content="@casaverse" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
@@ -532,7 +532,7 @@ const DynamicPage = ({
                     <List spacing={3}>
                       <ListItem alignItems={"center"} display={"flex"}>
                         <ListIcon as={IoCheckmarkSharp} color="green.500" />
-                        Bestellen via Orion Home
+                        Bestellen via Casa Verse
                       </ListItem>
                       <ListItem alignItems={"center"} display={"flex"}>
                         <ListIcon as={IoCheckmarkSharp} color="green.500" />

@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import logo from "../images/orion.png";
 import {
   TiSocialFacebook,
   TiSocialInstagram,
@@ -82,19 +81,19 @@ const Footer = () => {
             <Text as={"span"} fontWeight={"semibold"} lineHeight={1.7}>
               Email:
             </Text>{" "}
-            orionstore.nl@gmail.com | info@orionhome.nl
+            casaversenl@gmail.com | info@casaverse.nl
           </Text>
           <Text>
             <Text as={"span"} fontWeight={"semibold"} lineHeight={1.7}>
               Telefoon:
             </Text>{" "}
-            +31619103508
+            +31627382805
           </Text>
           <Text>
             <Text as={"span"} fontWeight={"semibold"} lineHeight={1.7}>
               Whatsapp:
             </Text>{" "}
-            619103508
+            0627382805
           </Text>
           <Text mt={2}>Bereikbaar op werkdagen tussen 09:00 en 17:00 uur</Text>
           {/* <Image className="w-24 m-0 p-0 " src={logo} alt="logo" /> */}
@@ -262,7 +261,7 @@ const Footer = () => {
         display={"flex"}
         flexDirection={{ base: "column", md: "row" }}
       >
-        <p className="text-sm text-start">All rights reserved Orion Home</p>
+        <p className="text-sm text-start">All rights reserved Casa Verse</p>
         <HStack spacing={"12px"}>
           <Image src={ideal} alt="logo" width={50} height={50} />
           <Image src={visa} alt="logo" width={50} height={50} />

@@ -129,7 +129,7 @@ const Reviews = ({ reviewsData, averageRating }: any) => {
               !userInfo
                 ? "Log in om een review te schrijven"
                 : !canReview
-                ? "Je kunt wel reviews schrijven bij alles wat je ooit via orionhome.nl gekocht hebt."
+                ? "Je kunt wel reviews schrijven bij alles wat je ooit via casaverse.nl gekocht hebt."
                 : alreadyReviewed && "Je hebt dit product al gereviewd"
             }
           >

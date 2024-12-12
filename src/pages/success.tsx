@@ -15,7 +15,7 @@ const SuccessPage = () => {
         Uw bestelling is succesvol ontvangen
       </h1>
       <Text w={{ lg: "40%" }} fontSize={"18px"} textAlign={"justify"}>
-        Hartelijk dank voor uw aankoop bij Orion Home. We waarderen uw
+        Hartelijk dank voor uw aankoop bij Casa Verse. We waarderen uw
         vertrouwen in onze producten. <br /> Uw bestelling is succesvol
         ontvangen en wordt nu verwerkt. Zodra uw bestelling is verzonden,
         ontvangt u een e-mail met de trackinginformatie. <br /> Als u nog vragen

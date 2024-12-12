@@ -68,11 +68,8 @@ const Retourneren = () => {
             <p>
               Mocht uw zending niet binnen deze termijn zijn ontvangen, neem dan
               contact met ons op via{" "}
-              <a
-                style={{ color: "blue" }}
-                href="mailto:orionstores.nl@gmail.com"
-              >
-                orionstores.nl@gmail.com.
+              <a style={{ color: "blue" }} href="mailto:casaversenl@gmail.com">
+                casaversenl@gmail.com.
               </a>
             </p>
           </Stack>
@@ -144,11 +141,8 @@ const Retourneren = () => {
                 contact
               </Link>{" "}
               op met onze klantenservice via{" "}
-              <a
-                style={{ color: "blue" }}
-                href="mailto:orionstores.nl@gmail.com"
-              >
-                orionstores.nl@gmail.com
+              <a style={{ color: "blue" }} href="mailto:casaversenl@gmail.com">
+                casaversenl@gmail.com
               </a>
             </p>
             <br />
@@ -271,11 +265,8 @@ const Retourneren = () => {
             </p>
             <br />
             <p>
-              <a
-                style={{ color: "blue" }}
-                href="mailto:orionstores.nl@gmail.com"
-              >
-                orionstores.nl@gmail.com
+              <a style={{ color: "blue" }} href="mailto:casaversenl@gmail.com">
+                casaversenl@gmail.com
               </a>
               <br />
               We antwoorden meestal binnen een uur

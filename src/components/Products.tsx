@@ -70,7 +70,7 @@ const Products = ({ productData, similar }: any) => {
                     ? product?.attributes?.image?.data[0]?.attributes?.url
                     : product.attributes?.imageUrls
                     ? product.attributes?.imageUrls[0]
-                    : "/images/orion.png"
+                    : "/images/casaverse.jpeg"
                 }
                 alt="productImage"
               />

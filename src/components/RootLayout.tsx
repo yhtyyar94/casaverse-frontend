@@ -11,10 +11,10 @@ interface Props {
 
 const RootLayout = ({ children }: Props) => {
   const meta = {
-    title: "Orion Home",
+    title: "Casa Verse",
     description: "Vind jouw perfecte koopjes, slechts een klik verwijderd!",
     viewport: "width=device-width, initial-scale=1",
-    keywords: "Orion, home, koopjes, perfecte koopjes",
+    keywords: "CasaVerse, home, koopjes, perfecte koopjes",
   };
 
   return (

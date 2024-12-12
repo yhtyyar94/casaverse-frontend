@@ -115,9 +115,9 @@ const VeelgesteldeVragen = () => {
               <AccordionPanel pb={4}>
                 Neem dan even contact op met onze klantenservice.Dit kan
                 telefonisch op werkdagen van 09:00 tot 17:00 uur op
-                telefoonnummer: +31619103508. Of stuur een e-mail naar
-                orionstores.nl@gmail.com en vermeld uw bestelnummer. Dan komen
-                wij daar binnen 1 werkdag op terug.
+                telefoonnummer: 0627382805. Of stuur een e-mail naar
+                casaversenl@gmail.com en vermeld uw bestelnummer. Dan komen wij
+                daar binnen 1 werkdag op terug.
               </AccordionPanel>
             </>
           )}
@@ -143,7 +143,7 @@ const VeelgesteldeVragen = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                Alle producten van orionhome.nl zijn nieuw en ongebruikt. Daar
+                Alle producten van casaverse.nl zijn nieuw en ongebruikt. Daar
                 zit dus standaard fabrieksgarantie op. De fabrieksgarantie kan
                 per artikel verschillen, dus let op de productpagina hoeveel
                 jaar garantie op dat product zit.
