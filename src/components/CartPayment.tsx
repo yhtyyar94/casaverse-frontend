@@ -124,7 +124,7 @@ const CartPayment = ({ setActiveIndex }: { setActiveIndex: any }) => {
           <Input type="text" placeholder="Kortingscode" />
           <InputRightAddon p={0}>
             <Button
-              _hover={{ bgColor: "#febd00" }}
+              _hover={{ bgColor: "#20a2c6" }}
               bgColor={"orange"}
               w={"100%"}
               onClick={() =>
@@ -151,19 +151,26 @@ const CartPayment = ({ setActiveIndex }: { setActiveIndex: any }) => {
       </p>
       {userInfo ? (
         <div className="flex flex-col items-center">
-          <button
+          <Button
             onClick={handleCheckout}
             className="w-full h-10 text-sm font-semibold  text-black rounded-lg hover:bg-amazon_yellow hover:text-white duration-300"
-            style={{ backgroundColor: "orange" }}
+            bgColor={"#20a2c6"}
+            _hover={{ bgColor: "#2e849e" }}
+            color={"white"}
           >
             Bestellen
-          </button>
+          </Button>
         </div>
       ) : (
         <div className="flex flex-col items-center">
-          <button className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed">
+          <Button
+            className="w-full h-10 text-sm font-semibold bg-amazon_blue bg-opacity-50 text-white rounded-lg cursor-not-allowed"
+            bgColor={"#20a2c6"}
+            _hover={{ bgColor: "#2e849e" }}
+            color={"white"}
+          >
             Bestellen
-          </button>
+          </Button>
           <p className="text-xs mt-1 text-red-500 font-semibold animate-bounce">
             Log in om verder te gaan
           </p>

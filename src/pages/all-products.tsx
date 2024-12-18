@@ -73,8 +73,8 @@ const AllProducts = ({ products }: { products: any }) => {
             border={"none"}
             textAlign={"end"}
           >
-            <option value="price:asc">Prijs oplopend</option>
-            <option value="price:desc">Prijs aflopend</option>
+            <option value="bundlePricesPrice:asc">Prijs oplopend</option>
+            <option value="bundlePricesPrice:desc">Prijs aflopend</option>
             <option value="title:asc">Naam oplopend</option>
             <option value="title:desc">Naam aflopend</option>
             {/* add date filter */}

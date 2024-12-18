@@ -28,7 +28,7 @@ const SuccessPage = () => {
         href={"/"}
       >
         <Button
-          bgColor={"#febd00"}
+          bgColor={"#20a2c6"}
           _hover={{ color: "white", bgColor: "#22c35e" }}
         >
           Doorgaan met winkelen

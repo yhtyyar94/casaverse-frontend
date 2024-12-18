@@ -13,20 +13,21 @@ const getAllCategories = async () => {
     );
     // filter the categories if the category has no products
     const res = response.data.data;
+
     const filteredCategories = res.filter(
-      (category: any) => category.attributes.product.data
+      (category: any) => category.attributes.products.data
     );
     return { ...response.data, data: filteredCategories };
   } catch (error: any) {
     console.log(error);
-    const errorMessage = error.response?.data?.error?.message;
-    const dutchMessage = await axios.post(
+    // const errorMessage = error.response?.data?.error?.message;
+    /* const dutchMessage = await axios.post(
       `${process.env.NEXT_PUBLIC_AUTH_URL}/api/translate`,
       {
         text: errorMessage,
       }
-    );
-    return { message: dutchMessage.data.result };
+    ); */
+    return { message: error };
   }
 };
 

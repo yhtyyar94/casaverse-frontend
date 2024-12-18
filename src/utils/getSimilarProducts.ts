@@ -3,7 +3,7 @@ import axios from "axios";
 const getSimilarProducts = async (category: string) => {
   try {
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/products?filters[category][title][$eq]=${category}&pagination[pageSize]=10&filters[$and][0][imageUrls][$notNull]=true&filters[$and][1][image][id][$notNull]=true&populate=*`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/products?filters[category][title][$eq]=${category}&pagination[pageSize]=10&filters[$or][0][imageUrls][$notNull]=true&filters[$or][1][image][id][$notNull]=true&populate=*`,
       {
         headers: {
           "Content-Type": "application/json",

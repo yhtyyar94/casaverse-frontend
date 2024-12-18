@@ -8,6 +8,7 @@ import { addToCart, addToFavorite } from "@/store/nextSlice";
 import Link from "next/link";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/router";
+import { background, Button } from "@chakra-ui/react";
 
 const Products = ({ productData, similar }: any) => {
   const [products, setProducts] = useState(productData);
@@ -93,7 +94,7 @@ const Products = ({ productData, similar }: any) => {
                         : product.attributes.imageUrls[0],
                       isNew: product.attributes?.isNew,
                       oldPrice: product.attributes?.oldPrice,
-                      price: product.attributes?.price,
+                      price: product.attributes?.bundlePricesPrice,
                       title: product.attributes.showBolComData
                         ? product.attributes.bolDetails.attributes.find(
                             (item: any) => item.id === "Titel"
@@ -123,7 +124,7 @@ const Products = ({ productData, similar }: any) => {
                         : product.attributes.imageUrls[0],
                       isNew: product.attributes?.isNew,
                       oldPrice: product.attributes?.oldPrice,
-                      price: product.attributes?.price,
+                      price: product.attributes?.bundlePricesPrice,
                       title: product.attributes.showBolComData
                         ? product.attributes.bolDetails.attributes.find(
                             (item: any) => item.id === "Titel"
@@ -143,7 +144,8 @@ const Products = ({ productData, similar }: any) => {
                 bespaar{" "}
                 <FormattedPrice
                   amount={
-                    product.attributes?.oldPrice - product.attributes?.price
+                    product.attributes?.oldPrice -
+                    product.attributes?.bundlePricesPrice
                   }
                 />
               </p>
@@ -195,13 +197,15 @@ const Products = ({ productData, similar }: any) => {
                   </span>
                 )}
                 <span className="text-amazon_blue font-semibold">
-                  <FormattedPrice amount={product.attributes?.price} />
+                  <FormattedPrice
+                    amount={product.attributes?.bundlePricesPrice}
+                  />
                 </span>
               </p>
             </div>
           </Link>
           <div className="px-4 py-3 flex flex-col gap-1 mt-auto">
-            <button
+            <Button
               onClick={() =>
                 dispatch(
                   addToCart({
@@ -217,7 +221,7 @@ const Products = ({ productData, similar }: any) => {
                       : product.attributes.imageUrls[0],
                     isNew: product.attributes?.isNew,
                     oldPrice: product.attributes?.oldPrice,
-                    price: product.attributes?.price,
+                    price: product.attributes?.bundlePricesPrice,
                     title: product.attributes.showBolComData
                       ? product.attributes.bolDetails.attributes.find(
                           (item: any) => item.id === "Titel"
@@ -227,10 +231,14 @@ const Products = ({ productData, similar }: any) => {
                   })
                 )
               }
-              className="h-10 font-medium bg-amazon_blue text-white rounded-md hover:bg-amazon_yellow hover:text-black duration-300 mt-2"
+              className="h-10 font-medium text-white rounded-md hover:bg-amazon_yellow hover:text-white duration-300 mt-2"
+              bgColor={"#20a2c6"}
+              color={"white"}
+              fontWeight={"normal"}
+              _hover={{ bgColor: "#2e849e" }}
             >
               In winkelwagen
-            </button>
+            </Button>
           </div>
         </div>
       ))}

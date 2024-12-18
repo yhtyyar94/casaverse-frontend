@@ -121,7 +121,7 @@ const SignUp = ({ setProcess }: { setProcess: any }) => {
             name="password"
           />
 
-          <Button type="submit" w={"100%"} bgColor={"#febd00"}>
+          <Button type="submit" w={"100%"} bgColor={"#20a2c6"}>
             Register
           </Button>
         </form>

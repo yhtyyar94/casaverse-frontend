@@ -209,8 +209,9 @@ const Accountgegevens = ({ checkout }: { checkout: boolean }) => {
             type="submit"
             mb={3}
             w={"100%"}
-            bgColor={"#febd00"}
-            _hover={{ bgColor: "#22c35e", color: "white" }}
+            bgColor={"#20a2c6"}
+            color={"white"}
+            _hover={{ bgColor: "#2e849e", color: "white" }}
           >
             Opslaan
           </Button>

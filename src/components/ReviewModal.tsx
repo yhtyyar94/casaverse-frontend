@@ -115,7 +115,7 @@ function ReviewModal({
             <ModalFooter>
               <Button
                 onClick={sendReview}
-                bgColor={"#febd00"}
+                bgColor={"#20a2c6"}
                 _hover={{ bgColor: "orange" }}
                 mr={3}
                 type="submit"

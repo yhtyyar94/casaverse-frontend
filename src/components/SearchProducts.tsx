@@ -50,7 +50,7 @@ const SearchProducts = ({ product }: { product: any }) => {
         <p className="text-sm flex products-center gap-1">
           prijs:{" "}
           <span className="font-semibold">
-            <FormattedPrice amount={product.attributes?.price} />
+            <FormattedPrice amount={product.attributes?.bundlePricesPrice} />
           </span>
           {product.attributes?.oldPrice && (
             <span className="text-gray-600 line-through">
@@ -64,7 +64,10 @@ const SearchProducts = ({ product }: { product: any }) => {
           <p className="text-base font-semibold animate-bounce text-amazon_blue">
             bespaar{" "}
             <FormattedPrice
-              amount={product.attributes?.oldPrice - product.attributes?.price}
+              amount={
+                product.attributes?.oldPrice -
+                product.attributes?.bundlePricesPrice
+              }
             />
           </p>
         </div>

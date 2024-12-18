@@ -13,7 +13,7 @@ const getProductsByCategory = async (
             $eq: category,
           },
         },
-        $and: [
+        $or: [
           {
             imageUrls: {
               $notNull: true,
@@ -44,6 +44,7 @@ const getProductsByCategory = async (
         },
       }
     );
+    console.log(res1.data);
     const products = res1.data;
     return products;
   } catch (error) {

@@ -42,8 +42,8 @@ const MijnAccount = () => {
             w={"100%"}
             justifyContent={"flex-start"}
             onClick={(e) => setActive(e.currentTarget.innerText.trim())}
-            bgColor={active === "Accountgegevens" ? "#febd00" : "whitesmoke"}
-            _hover={{ bgColor: "#febd00" }}
+            bgColor={active === "Accountgegevens" ? "#20a2c6" : "whitesmoke"}
+            _hover={{ bgColor: "#20a2c6" }}
           >
             Accountgegevens
           </Button>
@@ -51,8 +51,8 @@ const MijnAccount = () => {
             w={"100%"}
             justifyContent={"flex-start"}
             onClick={(e) => setActive(e.currentTarget.innerText.trim())}
-            bgColor={active === "Bestellingen" ? "#febd00" : "whitesmoke"}
-            _hover={{ bgColor: "#febd00" }}
+            bgColor={active === "Bestellingen" ? "#20a2c6" : "whitesmoke"}
+            _hover={{ bgColor: "#20a2c6" }}
           >
             Bestellingen
           </Button>
@@ -60,16 +60,16 @@ const MijnAccount = () => {
             w={"100%"}
             justifyContent={"flex-start"}
             onClick={(e) => setActive(e.currentTarget.innerText.trim())}
-            bgColor={active === "Adresgegevens" ? "#febd00" : "whitesmoke"}
-            _hover={{ bgColor: "#febd00" }}
+            bgColor={active === "Adresgegevens" ? "#20a2c6" : "whitesmoke"}
+            _hover={{ bgColor: "#20a2c6" }}
           >
             Adresgegevens
           </Button>
           <Button
             w={"100%"}
             justifyContent={"flex-start"}
-            bgColor={active === "Uitloggen" ? "#febd00" : "whitesmoke"}
-            _hover={{ bgColor: "#febd00" }}
+            bgColor={active === "Uitloggen" ? "#20a2c6" : "whitesmoke"}
+            _hover={{ bgColor: "#20a2c6" }}
           >
             Uitloggen
           </Button>

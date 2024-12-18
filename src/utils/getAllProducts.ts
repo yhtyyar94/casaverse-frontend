@@ -5,7 +5,7 @@ const getAllProducts = async (page?: number, query?: string) => {
     const res1 = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/api/products?${
         query ? query : ""
-      }&filters[$and][0][imageUrls][$notNull]=true&filters[$and][1][image][id][$notNull]=true&pagination[pageSize]=100&pagination[page]=${
+      }&filters[$or][0][imageUrls][$notNull]=true&filters[$or][1][image][id][$notNull]=true&pagination[pageSize]=100&pagination[page]=${
         page ? page : 1
       }`,
       {

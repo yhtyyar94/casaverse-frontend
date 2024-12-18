@@ -401,7 +401,9 @@ const DynamicPage = ({
                 <div className="flex flex-col justify-center sm:w-full w-90% border border-gray-200 rounded-lg mx-auto p-10">
                   <p className="text-base text-gray-600 flex items-center gap-1">
                     <span className="text-5xl text-red-600 font-bold">
-                      <FormattedPrice amount={product.attributes?.price} />
+                      <FormattedPrice
+                        amount={product.attributes?.bundlePricesPrice}
+                      />
                     </span>
                     {product.oldPrice && (
                       <span className="ml-1 line-through">
@@ -416,13 +418,13 @@ const DynamicPage = ({
                         <FormattedPrice
                           amount={
                             product.attributes?.oldPrice -
-                            product.attributes?.price
+                            product.attributes?.bundlePricesPrice
                           }
                         />
                       </span>
                     </p>
                   )}
-                  {product.attributes?.voorraad && (
+                  {product.attributes?.correctedStock && (
                     <Text
                       border={"1px solid green"}
                       w={"max-content"}
@@ -471,7 +473,7 @@ const DynamicPage = ({
                                   : product.attributes?.imageUrls[0],
                                 isNew: product.attributes?.isNew,
                                 oldPrice: product.attributes?.oldPrice,
-                                price: product.attributes?.price,
+                                price: product.attributes?.bundlePricesPrice,
                                 title: product.attributes?.showBolComData
                                   ? product.attributes.bolDetails.attributes.find(
                                       (item: any) => item.id === "Titel"
@@ -505,7 +507,7 @@ const DynamicPage = ({
                                 : product.attributes?.imageUrls[0],
                               isNew: product.attributes?.isNew,
                               oldPrice: product.attributes?.oldPrice,
-                              price: product.attributes?.price,
+                              price: product.attributes?.bundlePricesPrice,
                               title: product.attributes?.showBolComData
                                 ? product.attributes.bolDetails.attributes.find(
                                     (item: any) => item.id === "Titel"
@@ -515,9 +517,10 @@ const DynamicPage = ({
                             })
                           )
                         }
-                        bgColor={"#febd00"}
+                        bgColor={"#20a2c6"}
+                        color={"white"}
                         fontWeight={"normal"}
-                        _hover={{ bgColor: "#f7ca00" }}
+                        _hover={{ bgColor: "#2e849e" }}
                         w={{ base: "100%", md: "auto" }}
                       >
                         <FiShoppingCart
@@ -639,12 +642,14 @@ const DynamicPage = ({
               spacing={"auto"}
               flexWrap={"wrap"}
             >
-              <Stack w={"100%"}>
-                <Text fontSize={"xl"} fontWeight={"bold"} pl={5}>
-                  Bekijk ook eens
-                </Text>
-                <Products productData={similar} similar={true} />
-              </Stack>
+              {similar && similar?.length > 0 && (
+                <Stack w={"100%"}>
+                  <Text fontSize={"xl"} fontWeight={"bold"} pl={5}>
+                    Bekijk ook eens
+                  </Text>
+                  <Products productData={similar} similar={true} />
+                </Stack>
+              )}
             </HStack>
           </VStack>
         )}
@@ -667,6 +672,8 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     if (!res.data || res.data.length === 0) {
       return { props: { productData: {} } };
     }
+
+    console.log("res", res.data);
 
     const reviews = await getReviews(id);
     const averageRating = await getAverageRating(id);

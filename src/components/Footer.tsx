@@ -160,8 +160,8 @@ const Footer = () => {
             cursor={"pointer"}
             _hover={{ textDecoration: "underline" }}
           >
-            <Link href={`/category/Fashion`} passHref>
-              Fashion
+            <Link href={`/category/Boeken`} passHref>
+              Boeken
             </Link>
           </Text>
           <Text
@@ -228,9 +228,9 @@ const Footer = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
               />
-              <InputRightAddon p={0} borderRadius={"6px"} bgColor={"#febd00"}>
+              <InputRightAddon p={0} borderRadius={"6px"} bgColor={"#20a2c6"}>
                 <Button
-                  bgColor={"black"}
+                  bgColor={"#20a2c6"}
                   color={"white"}
                   w={"100%"}
                   onClick={handleSubscribe}
@@ -253,7 +253,7 @@ const Footer = () => {
       <Box
         p={5}
         px={10}
-        borderTop={"1px solid #febd00"}
+        borderTop={"1px solid #20a2c6"}
         className=" bg-gray-300 text-#677279 flex items-center justify-center gap-4"
         justifyContent={"space-between"}
         alignItems={"center"}

@@ -60,9 +60,9 @@ const LocationOnGoogleMaps = () => {
           <Box mt={5}>
             <Button
               variant={"solid"}
-              bg={"black"}
+              bg={"#20a2c6"}
               color={"white"}
-              _hover={{ bg: "#febd00" }}
+              _hover={{ bg: "#20a2c6" }}
               onClick={() =>
                 window.open(
                   "https://www.google.com/maps/dir/?api=1&destination=52.00878,5.575974"

@@ -158,7 +158,7 @@ const Contact = ({ checkout }: { checkout: boolean }) => {
             type="submit"
             mb={3}
             w={"100%"}
-            bgColor={"#febd00"}
+            bgColor={"#20a2c6"}
             _hover={{ bgColor: "#22c35e", color: "white" }}
           >
             Verzenden

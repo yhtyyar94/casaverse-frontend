@@ -3,7 +3,7 @@ import axios from "axios";
 const getFeaturedProducts = async () => {
   try {
     const res1 = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/products?filters[$and][0][isFeatured][$eq]=true&filters[$and][1][imageUrls][$notNull]=true&filters[$and][2][image][id][$notNull]=true&filters[$and][2][voorraad][$nei]=0&populate=*`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/products?filters[$and][0][isFeatured][$eq]=true&filters[$or][1][imageUrls][$notNull]=true&filters[$or][2][image][id][$notNull]=true&filters[$and][2][correctedStock][$nei]=0&populate=*`,
       {
         headers: {
           "Content-Type": "application/json",

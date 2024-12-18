@@ -54,13 +54,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   } catch (error: any) {
     console.log("erroor", error);
     const errorMessage = error.response?.data?.error?.message;
-    const dutchMessage = await axios.post(
+    /* const dutchMessage = await axios.post(
       `${process.env.NEXT_PUBLIC_AUTH_URL}/api/translate`,
       {
         text: errorMessage,
       }
-    );
-    return res.status(500).json({ message: dutchMessage.data.result });
+    ); */
+    return res.status(500).json({ message: errorMessage });
   }
 };
 

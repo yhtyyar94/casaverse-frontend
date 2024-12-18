@@ -101,7 +101,13 @@ const SignIn = ({ setProcess }: { setProcess: any }) => {
           >
             Wachtwoord vergeten?
           </Text>
-          <Button w={"100%"} bgColor={"#febd00"} type="submit">
+          <Button
+            w={"100%"}
+            bgColor={"#20a2c6"}
+            type="submit"
+            color={"white"}
+            _hover={{ bgColor: "#2e849e" }}
+          >
             Log in
           </Button>
         </form>
@@ -110,7 +116,7 @@ const SignIn = ({ setProcess }: { setProcess: any }) => {
         <Button
           w={"100%"}
           onClick={() => setProcess("sign-up")}
-          colorScheme="yellow"
+          colorScheme="blue"
         >
           Register
         </Button>

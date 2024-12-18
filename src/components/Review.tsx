@@ -105,11 +105,11 @@ const Reviews = ({ reviewsData, averageRating }: any) => {
               i + 1 <= averageRating?.averageRating ? (
                 <MdOutlineStarPurple500
                   key={i}
-                  color={"#febd00"}
+                  color={"#20a2c6"}
                   size={"22px"}
                 />
               ) : (
-                <MdOutlineStarOutline key={i} color={"#febd00"} size={"22px"} />
+                <MdOutlineStarOutline key={i} color={"#20a2c6"} size={"22px"} />
               )
             )}
             <Text fontSize={"sm"} color={"gray"}>
@@ -134,7 +134,7 @@ const Reviews = ({ reviewsData, averageRating }: any) => {
             }
           >
             <Button
-              bgColor={"#febd00"}
+              bgColor={"#20a2c6"}
               _hover={{ bgColor: "orange" }}
               w={{ sm: "100%", md: "100%", lg: "auto" }}
               onClick={onOpen}
@@ -169,11 +169,11 @@ const Reviews = ({ reviewsData, averageRating }: any) => {
               i + 1 <= review?.attributes?.stars ? (
                 <MdOutlineStarPurple500
                   key={i}
-                  color={"#febd00"}
+                  color={"#20a2c6"}
                   size={"22px"}
                 />
               ) : (
-                <MdOutlineStarOutline key={i} color={"#febd00"} size={"22px"} />
+                <MdOutlineStarOutline key={i} color={"#20a2c6"} size={"22px"} />
               )
             )}
           </HStack>

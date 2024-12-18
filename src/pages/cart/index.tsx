@@ -50,7 +50,7 @@ const CartPage = () => {
             <Accordion allowToggle index={activeIndex}>
               <AccordionItem>
                 <AccordionButton
-                  _expanded={{ bg: "#febd00", color: "white" }}
+                  _expanded={{ bg: "#20a2c6", color: "white" }}
                   onClick={() => setActiveIndex(0)}
                 >
                   <Box as="span" flex="1" textAlign="left" fontWeight={"bold"}>
@@ -67,7 +67,8 @@ const CartPage = () => {
                   {userInfo && (
                     <Text textAlign={"right"}>
                       <Button
-                        bgColor={"#febd00"}
+                        color={"white"}
+                        bgColor={"#20a2c6"}
                         _hover={{ bgColor: "orange" }}
                         onClick={() => setActiveIndex(1)}
                       >
@@ -80,7 +81,7 @@ const CartPage = () => {
               {userInfo && (
                 <AccordionItem>
                   <AccordionButton
-                    _expanded={{ bg: "#febd00", color: "white" }}
+                    _expanded={{ bg: "#20a2c6", color: "white" }}
                     onClick={() => setActiveIndex(1)}
                   >
                     <Box
@@ -96,7 +97,8 @@ const CartPage = () => {
                   <AccordionPanel>
                     <Text textAlign={"right"}>
                       <Button
-                        bgColor={"#febd00"}
+                        bgColor={"#20a2c6"}
+                        color={"white"}
                         _hover={{ bgColor: "orange" }}
                         onClick={() => setActiveIndex(0)}
                       >
@@ -106,7 +108,8 @@ const CartPage = () => {
                     <Accountgegevens checkout={true} />
                     <Text textAlign={"right"}>
                       <Button
-                        bgColor={"#febd00"}
+                        color={"white"}
+                        bgColor={"#20a2c6"}
                         _hover={{ bgColor: "orange" }}
                         onClick={() => setActiveIndex(2)}
                       >
@@ -119,7 +122,7 @@ const CartPage = () => {
               {userInfo && (
                 <AccordionItem>
                   <AccordionButton
-                    _expanded={{ bg: "#febd00", color: "white" }}
+                    _expanded={{ bg: "#20a2c6", color: "white" }}
                     onClick={() => setActiveIndex(2)}
                   >
                     <Box
@@ -135,7 +138,8 @@ const CartPage = () => {
                   <AccordionPanel>
                     <Text textAlign={"right"}>
                       <Button
-                        bgColor={"#febd00"}
+                        bgColor={"#20a2c6"}
+                        color={"white"}
                         _hover={{ bgColor: "orange" }}
                         onClick={() => setActiveIndex(1)}
                       >

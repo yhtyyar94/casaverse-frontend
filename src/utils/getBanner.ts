@@ -19,13 +19,13 @@ const getBannerImages = async () => {
   } catch (error: any) {
     console.log(error);
     const errorMessage = error.response?.data?.error?.message;
-    const dutchMessage = await axios.post(
+    /* const dutchMessage = await axios.post(
       `${process.env.NEXT_PUBLIC_AUTH_URL}/api/translate`,
       {
         text: errorMessage,
       }
-    );
-    return { message: dutchMessage.data.result };
+    ); */
+    return { message: error };
   }
 };
 

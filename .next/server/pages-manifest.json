@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/category/[name]": "pages/category/[name].js",
-  "/cookies": "pages/cookies.js"
+  "/api/sitemap.xml": "pages/api/sitemap.xml.js",
+  "/product/[id]": "pages/product/[id].js"
 }

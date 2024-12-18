@@ -17,6 +17,7 @@ import {
 import { useRouter } from "next/router";
 import PhoneBottomHeader from "./PhoneBottomHeader";
 import { removeUser } from "@/store/nextSlice";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
   const { productData, favoriteData, userInfo } = useSelector(
@@ -101,7 +102,10 @@ const Header = () => {
                 type="text"
                 placeholder="Zoeken..."
               />
-              <span className="w-12 h-full bg-black text-black text-2xl flex items-center justify-center absolute right-0 rounded-tr-md rounded-br-md">
+              <span
+                style={{ backgroundColor: "#20a2c6" }}
+                className="w-12 h-full bg-black text-black text-2xl flex items-center justify-center absolute right-0 rounded-tr-md rounded-br-md"
+              >
                 <HiOutlineSearch
                   cursor={"pointer"}
                   onClick={(e) => router.push(`/search-results/${searchQuery}`)}
@@ -179,7 +183,7 @@ const Header = () => {
             >
               <p>Marked</p>
 
-              {favoriteData?.length > 0 && (
+              {Array.isArray(favoriteData) && (
                 <p className="text-xs text-black text-center">
                   {favoriteData?.length}
                 </p>
@@ -193,10 +197,14 @@ const Header = () => {
               href={"/cart"}
               className="flex items-center px-2 sm:px-0 border border-transparent cursor-pointer duration-300 h-[70%] relative mr-2"
             >
-              <Image
+              {/* <Image
                 className="w-auto object-cover h-8 sm:mt-2 md:mt-0"
                 src={cartIcon}
                 alt="cartImg"
+              /> */}
+              <FaShoppingCart
+                className="w-auto object-cover h-8 sm:mt-2 md:mt-0"
+                color="#20a2c6"
               />
               <Text
                 display={{ base: "none", sm: "none" }}
@@ -226,7 +234,10 @@ const Header = () => {
           type="text"
           placeholder="Zoeken..."
         />
-        <span className="w-12 h-full bg-black text-black text-2xl flex items-center justify-center relative right-0 rounded-tr-md rounded-br-md">
+        <span
+          style={{ backgroundColor: "#20a2c6" }}
+          className="w-12 h-full bg-black text-black text-2xl flex items-center justify-center relative right-0 rounded-tr-md rounded-br-md"
+        >
           <HiOutlineSearch
             cursor={"pointer"}
             onClick={(e) => router.push(`/search-results/${searchQuery}`)}

@@ -132,7 +132,7 @@ const ResetPassword = ({ setProcess }: { setProcess: any }) => {
             name="passwordConfirmation"
           />
 
-          <Button w={"100%"} bgColor={"#febd00"} type="submit">
+          <Button w={"100%"} bgColor={"#20a2c6"} type="submit">
             Opnieuw instellen
           </Button>
         </form>

@@ -76,7 +76,7 @@ const ForgotPassword = ({ setProcess }: { setProcess: any }) => {
             name="email"
           />
 
-          <Button w={"100%"} bgColor={"#febd00"} type="submit">
+          <Button w={"100%"} bgColor={"#20a2c6"} type="submit">
             Versturen
           </Button>
         </form>
