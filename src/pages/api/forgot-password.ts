@@ -29,7 +29,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         text: errorMessage,
       }
     ); */
-    console.log(dutchMessage.data.result);
+
     return res.status(500).json({ message: error });
   }
 };
