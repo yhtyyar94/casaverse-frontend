@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/api/sitemap.xml": "pages/api/sitemap.xml.js",
-  "/product/[id]": "pages/product/[id].js"
+  "/inloggen": "pages/inloggen.js"
 }

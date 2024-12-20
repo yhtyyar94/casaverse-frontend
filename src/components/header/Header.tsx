@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../images/casaverse.jpeg";
+import logo from "../../images/WhatsApp_Image_2024-11-29_at_11.07.08-removebg-preview.png";
 import cartIcon from "../../images/cartIcon.png";
 import { HiOutlineSearch } from "react-icons/hi";
 import Link from "next/link";
@@ -28,6 +28,8 @@ const Header = () => {
   const ref = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
 
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 41) {
@@ -49,6 +51,12 @@ const Header = () => {
           ref2.current.style.borderBottom = "1px solid #e2e8f0";
         }
       }
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
     });
   }, []);
 
@@ -127,12 +135,20 @@ const Header = () => {
                   width={150}
                   height={150}
                 /> */}
-                    <div className="text-xs text-black flex flex-col justify-between">
-                      <p className="text-black font-bold">
-                        {userInfo.firstname + " " + userInfo.lastname}
-                      </p>
-                      <p>{userInfo.email}</p>
-                    </div>
+                    {windowWidth > 400 ? (
+                      <div className="text-xs text-black flex flex-col justify-between">
+                        <p className="text-black font-bold">
+                          {userInfo.firstname + " " + userInfo.lastname}
+                        </p>
+                        <p>{userInfo.email}</p>
+                      </div>
+                    ) : (
+                      <div className="text-xs text-black flex flex-col justify-between mb-4">
+                        <p className="text-black font-bold">
+                          {userInfo.firstname}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </MenuButton>
                 <MenuList textAlign={"right"} p={0} borderRadius={0}>
@@ -183,7 +199,7 @@ const Header = () => {
             >
               <p>Marked</p>
 
-              {Array.isArray(favoriteData) && (
+              {windowWidth > 400 && Array.isArray(favoriteData) && (
                 <p className="text-xs text-black text-center">
                   {favoriteData?.length}
                 </p>
@@ -212,31 +228,39 @@ const Header = () => {
               >
                 Cart
               </Text>
-              <span className="absolute text-black text-sm sm:top-0 md:top-6 sm:left-[15px] md:left-[15px] font-semibold">
-                {productData ? productData?.length : 0}
-              </span>
+              {windowWidth > 400 && (
+                <span className="absolute text-black text-sm sm:top-0 md:top-6 sm:left-[15px] md:left-[15px] font-semibold">
+                  {productData ? productData?.length : 0}
+                </span>
+              )}
             </Link>
-            <div className="hidden items-center px-2 sm:px-0 border border-transparent hover:border-black cursor-pointer duration-300 h-[70%] relative sm:inline-flex md:hidden">
-              <PhoneBottomHeader />
-            </div>
+            {windowWidth > 400 && (
+              <div className="hidden items-center px-2 sm:px-0 border border-transparent hover:border-black cursor-pointer duration-300 h-[70%] relative sm:inline-flex md:hidden">
+                <PhoneBottomHeader />
+              </div>
+            )}
           </div>
           {/* sm search */}
         </Box>
       </div>
-      <div className="m-0 w-full  bg-white flex-1 h-10 md:hidden sm:inline-flex items-center justify-between sticky">
+      <div className="m-0 w-full  bg-white flex-1 h-10 md:hidden sm:inline-flex flex items-center justify-between sticky">
         <input
           onChange={handleSearch}
           onKeyDown={(e: any) => {
             if (e.key === "Enter") handleSearchSubmit(e);
           }}
           value={searchQuery}
-          className="w-full h-full rounded-md px-2 placeholder:text-sm text-base text-black border-[2px] border-gray outline-none focus-visible:border-black"
+          className={`${
+            windowWidth <= 400 ? "w-[85%]" : "w-full"
+          } h-full rounded-md px-2 placeholder:text-sm text-base text-black border-[2px] border-gray outline-none focus-visible:border-black`}
           type="text"
           placeholder="Zoeken..."
         />
         <span
           style={{ backgroundColor: "#20a2c6" }}
-          className="w-12 h-full bg-black text-black text-2xl flex items-center justify-center relative right-0 rounded-tr-md rounded-br-md"
+          className={`${
+            windowWidth <= 400 ? "w-[15%]" : "w-12"
+          } h-full bg-black text-black text-2xl flex items-center justify-center relative right-0 rounded-tr-md rounded-br-md`}
         >
           <HiOutlineSearch
             cursor={"pointer"}

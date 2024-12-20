@@ -17,7 +17,7 @@ const BottomHeader = () => {
   const { categories } = useSelector((state: StateProps) => state.next);
 
   return (
-    <div className="w-full h-10 bg-white text-sm text-black px-4 flex items-center justify-evenly sm:hidden md:inline-flex mb-1">
+    <div className="w-full h-10 bg-white text-sm text-black px-4 flex items-center justify-evenly hidden sm:hidden md:inline-flex mb-1">
       <Stack
         w={{ base: "100%", md: "86.5%" }}
         display={"flex"}

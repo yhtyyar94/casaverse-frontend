@@ -18,17 +18,21 @@ async function getRawBody(readable: Readable): Promise<Buffer> {
   return Buffer.concat(chunks);
 }
 
-const endpointSecret = "whsec_6b4ETNEWZWO14pEt4uuDgQnJGLylcGE2";
+const endpointSecret =
+  "whsec_da4527244f318deeaaec8cdbd5d723bbb14e36411fbf402a86e0353fcceddc22";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const sig = req.headers["stripe-signature"] as string;
     const buf = await getRawBody(req);
+    console.log("buf", buf);
     const event = await initStripe.webhooks.constructEventAsync(
       buf,
       sig,
       endpointSecret
     );
+
+    console.log("event", event);
     if (
       (event.type === "checkout.session.completed" &&
         (event.data.object as any)?.payment_status === "paid") ||
@@ -58,7 +62,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json({ message: "OK" });
   } catch (error: any) {
-    console.log(error?.response?.data?.error?.message);
+    console.log(error);
     res.status(500).json({ statusCode: 500, message: error.message });
   }
 };
