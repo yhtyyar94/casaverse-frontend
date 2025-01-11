@@ -59,10 +59,11 @@ const DynamicPage = ({
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [condition, setCondition] = useState("NIEUW");
 
   const firstDivRef = useRef<HTMLDivElement>(null);
   const secondDivRef = useRef<HTMLDivElement>(null);
-
+  console.log(productData);
   useEffect(() => {
     const handleScroll = () => {
       if (firstDivRef.current && secondDivRef.current) {
@@ -103,6 +104,17 @@ const DynamicPage = ({
       setSimilarProducts(similarProducts);
       setReviews(reviewsData);
       setIsLoading(false);
+      if (productData?.attributes?.conditionName === "New") {
+        setCondition("Nieuw");
+      } else if (productData?.attributes?.conditionName === "AS_NEW") {
+        setCondition("Als nieuw");
+      } else if (productData?.attributes?.conditionName === "GOOD") {
+        setCondition("Goed");
+      } else if (productData?.attributes?.conditionName === "REASONABLE") {
+        setCondition("Redelijk");
+      } else if (productData?.attributes?.conditionName === "MODERATE") {
+        setCondition("Matig");
+      }
     }
   }, [productData, similarProducts, reviewsData]);
 
@@ -180,7 +192,11 @@ const DynamicPage = ({
     description: product.attributes?.showBolComData
       ? product.attributes.bolDetails.attributes.find(
           (item: any) => item.id === "Beschrijving"
-        )["values"][0].value
+        )
+        ? product.attributes.bolDetails.attributes.find(
+            (item: any) => item.id === "Beschrijving"
+          )["values"][0].value
+        : product.attributes?.description
       : product.attributes?.description,
     image: product.attributes?.image.data
       ? product.attributes?.image.data[0]?.attributes?.url
@@ -399,12 +415,16 @@ const DynamicPage = ({
                 className="sm:col-span-1 md:col-span-1 flex flex-col gap-3 justify-center sm:p-0 sticky h-[max-content] sm:w-[95%] w-full"
               >
                 <div className="flex flex-col justify-center sm:w-full w-90% border border-gray-200 rounded-lg mx-auto p-10">
+                  <Text color={"gray"} fontStyle={"italic"}>
+                    {condition}
+                  </Text>
                   <p className="text-base text-gray-600 flex items-center gap-1">
                     <span className="text-5xl text-red-600 font-bold">
                       <FormattedPrice
                         amount={product.attributes?.bundlePricesPrice}
                       />
                     </span>
+
                     {product.oldPrice && (
                       <span className="ml-1 line-through">
                         <FormattedPrice amount={product.attributes?.oldPrice} />
@@ -425,16 +445,18 @@ const DynamicPage = ({
                     </p>
                   )}
                   {product.attributes?.correctedStock && (
-                    <Text
-                      border={"1px solid green"}
-                      w={"max-content"}
-                      px={1}
-                      color={"green"}
-                      fontWeight={"semibold"}
-                      my={4}
-                    >
-                      op voorraad
-                    </Text>
+                    <>
+                      <Text
+                        border={"1px solid green"}
+                        w={"max-content"}
+                        px={1}
+                        color={"green"}
+                        fontWeight={"semibold"}
+                        my={4}
+                      >
+                        op voorraad
+                      </Text>
+                    </>
                   )}
                   <HStack
                     alignItems={{ base: "start", md: "center" }}

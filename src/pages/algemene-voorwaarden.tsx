@@ -111,7 +111,7 @@ const AlgemeneVoorwaarden = () => {
       <p>
         Casaverse.nl;
         <br />
-        Wageningselaan 50, 3903 LA Veenendaal;
+        Industrieweg 6H, 4104 AR Culemborg;
         <br />
         Telefoonnummer: 0627382805
         <br />

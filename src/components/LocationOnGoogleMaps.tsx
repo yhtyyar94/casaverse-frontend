@@ -53,7 +53,7 @@ const LocationOnGoogleMaps = () => {
           <Text fontWeight={"bold"} mb={5}>
             Casa Verse
           </Text>
-          <Text mb={3}>Wageningselaan 50, 3903 LA Veenendaal</Text>
+          <Text mb={3}>Industrieweg 6H, 4104 AR Culemborg</Text>
           <Text>Maandag - Vrijdag: 9:00 - 17:00</Text>
           <Text>Zaterdag: 9:00 - 12:00</Text>
           <Text>Zondag: Gesloten</Text>
@@ -65,7 +65,7 @@ const LocationOnGoogleMaps = () => {
               _hover={{ bg: "#20a2c6" }}
               onClick={() =>
                 window.open(
-                  "https://www.google.com/maps/dir/?api=1&destination=52.00878,5.575974"
+                  "https://www.google.com/maps/dir//Industrieweg+6H,+4104+AR+Culemborg"
                 )
               }
             >
