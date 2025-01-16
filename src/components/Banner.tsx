@@ -2,7 +2,7 @@ import { Image } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 
 const Banner = ({ images }: { images?: string[] }) => {
-  console.log(images);
+  console.log("banner", images);
   return (
     <div className="relative">
       <Carousel

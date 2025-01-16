@@ -14,7 +14,7 @@ const getBannerImages = async () => {
     const images = response.data.data.map(
       (image: any) => image.attributes?.image?.data?.attributes?.url
     );
-    console.log(images);
+    console.log("get banner", images);
     return images;
   } catch (error: any) {
     console.log(error);

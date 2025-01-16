@@ -28,7 +28,7 @@ export default function Home({ productData, categories, images }: Props) {
   return (
     <main>
       <div className="mx-auto sm:w-full md:w-[80%]">
-        <Banner images={images} />
+        {images && <Banner images={images} />}
 
         <div className="relative md:-mt020 lgl:-mt-32 xl:-mt-60 z-30 mb-10">
           <MainPageCategories categoriesData={categories} />
@@ -43,7 +43,7 @@ export default function Home({ productData, categories, images }: Props) {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
-    const images = await getBannerImages();
+    // const images = await getBannerImages();
     const res = await getFeaturedProducts();
 
     const categoriesRes = await getAllCategories();
@@ -60,7 +60,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       props: {
         productData: res,
         categories,
-        images: images,
+        // images: images,
       },
     };
   } catch (error) {
