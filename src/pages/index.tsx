@@ -43,7 +43,7 @@ export default function Home({ productData, categories, images }: Props) {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
-    // const images = await getBannerImages();
+    const images = await getBannerImages();
     const res = await getFeaturedProducts();
 
     const categoriesRes = await getAllCategories();
@@ -60,7 +60,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       props: {
         productData: res,
         categories,
-        // images: images,
+        images: images,
       },
     };
   } catch (error) {
