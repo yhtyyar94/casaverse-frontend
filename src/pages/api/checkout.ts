@@ -90,8 +90,8 @@ export default async function handler(
               locale: "nl",
               line_items: modifiedItems,
               mode: "payment",
-              success_url: `${process.env.NEXT_PUBLIC_AUTH_URL}/success`,
-              cancel_url: `${process.env.NEXT_PUBLIC_AUTH_URL}/cart`,
+              success_url: `https://casaverse.nl/success`,
+              cancel_url: `https://casaverse.nl/cart`,
               metadata: {
                 email,
                 images: JSON.stringify(items?.map((item: any) => item.image)),
