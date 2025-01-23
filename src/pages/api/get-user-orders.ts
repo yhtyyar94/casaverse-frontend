@@ -8,7 +8,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const { userId } = req.body;
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/order-details?filters[user][id][$eq]=${userId}&populate[order_items][populate][0]=product.image`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/order-details?filters[$and][0][user][id][$eq]=${userId}&filters[$and][1][payment_status][$eq]=paid&populate[order_items][populate][0]=product.image`,
       {
         headers: {
           "Content-Type": "application/json",
